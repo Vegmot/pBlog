@@ -1,13 +1,19 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import Posts from '../posts/Posts';
 
-const Home = () => {
+const Home = (props) => {
   return (
-    <div>
-      <h1 className='text-primary'>Home Sweet Home</h1>
+    <Fragment>
+      <h1 className='text-primary'>{props.head}</h1>
+      <p>{props.body}</p>
       <Posts />
-    </div>
+    </Fragment>
   );
+};
+
+Home.defaultProps = {
+  head: 'Home Sweet Home',
+  body: "Because it's home",
 };
 
 export default Home;

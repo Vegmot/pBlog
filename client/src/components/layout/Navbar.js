@@ -5,6 +5,9 @@ const Navbar = ({ title, icon }) => {
   const authLinks = (
     <Fragment>
       <li>Welcome user!</li>
+      <li>
+        <Link to={2 < 3 ? '/post' : '/login'}>Post</Link>
+      </li>
       <a href='#!'>
         <i className='fas fa-sign-out-alt'></i> Logout
       </a>
@@ -13,6 +16,9 @@ const Navbar = ({ title, icon }) => {
 
   const guestLinks = (
     <Fragment>
+      <li>
+        <Link to={2 < 3 ? '/post' : '/login'}>Post</Link>
+      </li>
       <li>
         <Link to='/register'>Register</Link>
       </li>
